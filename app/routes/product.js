@@ -1,11 +1,11 @@
 module.exports = function(app) {
   var controller = app.controllers.product;
 
-  app.route('/produts')
+  app.route('/products')
   		.get(controller.fetchProducts)
   		.post(controller.insertProduct);
 
-  app.route('/produts/:id')
+  app.route('/products/:id')
   		.get(controller.fetchProductById)
   		.delete(controller.deleteProduct)
   		.put(controller.updateProduct);

@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+<!doctype html>
+<html ng-app='app'>
+	<head>
+		<meta charset="UTF-8">
+		<title>Products Checklist</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<script src="js/lib/angular/angular.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/controllers/products-controller.js"></script>
+	</head>
+	<body>
+		<div class="page-header">
+			<h1 class="text-center">Product List</h1> 
+			<p class="text-center">Welcome to my first MEAN app</p> 
+		</div>
+		<div class="table-responsive" ng-controller='ProductsController'>
+			<table class="table table-hover table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Category</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "prodcut in products">
+						<td>{{ prodcut._id }}</td>
+						<td>{{ prodcut.name }}</td>
+						<td>{{ prodcut.category }}</td>
+						<td>
+							<button type="button" class="btn btn-primary">Edit</button>
+						</td>
+						<td>
+							<button type="button" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
