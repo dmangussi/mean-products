@@ -1,4 +1,3 @@
-var http = require('http');
 var app = require('./config/express')();
 
 var server = app.listen(app.get('port'), function() {

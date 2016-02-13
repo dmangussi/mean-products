@@ -1,5 +1,5 @@
 var express = require('express');
-var load = require('express-load');
+var consign = require('consign');
 var bodyParser = require('body-parser');
 
 module.exports = function() {
@@ -19,7 +19,8 @@ module.exports = function() {
 	
 	app.use(require('method-override')())
 	
-	load('models', {cwd: 'app'})
+	consign({cwd: 'app'})
+		.include('models')
 		.then('controllers')
 		.then('routes')
 		.into(app);
