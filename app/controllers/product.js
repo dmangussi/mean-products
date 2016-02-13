@@ -15,6 +15,7 @@ var products = [
 		category: 'Category 3'
 	}
 ];
+var countProduct = 3;
 
 var controller = {};
 
@@ -40,5 +41,28 @@ controller.deleteProduct = function (req, res) {
 
 	res.sendStatus(204);
 };
+
+controller.insertProduct = function(req, res) {
+
+	var product = req.body;
+	product._id = ++countProduct;
+	products.push(product);
+
+	res.json(product);
+};
+
+controller.updateProduct = function(req, res) {
+
+	var product = req.body;
+	var productId = req.params.id;
+
+	var index = products.findIndex(function(product){
+		return product._id == req.params.id;
+	});
+
+	products[index] = product;
+
+	res.sendStatus(200);
+}
 
 module.exports = controller;
