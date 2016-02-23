@@ -5,17 +5,54 @@
 		<meta charset="UTF-8">
 		<title>Products Checklist</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 		<script src="js/lib/angular/angular.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/controllers/products-controller.js"></script>
 	</head>
 	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">MEAN Stack</a>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Home</a></li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">dmangussi@gmail.com</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+		</br>
+
 		<div class="page-header">
 			<h1 class="text-center">Product List</h1> 
 			<p class="text-center">Welcome to my first MEAN app</p> 
 		</div>
+
+		<div class"container-fluid">
+		    <div class="row">
+		        <div class="col-md-9">
+		        	<input type="text" class="form-control" id="inputAdd" placeholder="Add New Item...">
+		        </div>
+		        <div class="col-md-1">
+		        	<button type="button" class="btn btn-primary">Add</button>
+		        </div>
+		        <div class="col-md-1">
+		        	<button type="button" class="btn btn-primary">History</button>
+		        </div>	
+		    </div>
+		</div>		
+
 		<div class="table-responsive" ng-controller='ProductsController'>
+
 			<table class="table table-hover table-striped">
 				<thead>
 					<tr>
@@ -41,5 +78,13 @@
 				</tbody>
 			</table>
 		</div>
+
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br>
 	</body>
 </html>
